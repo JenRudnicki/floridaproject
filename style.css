@@ -51,9 +51,8 @@ body {
 }
 
 .island {
-    background-image: url(./pics/sunset.jpg)
+    background-image: url(./pics/sunset.jpg);
     background-size: cover;
-    /* background-image: url(./pics/water.jpg); */
 }
 
 .water {
