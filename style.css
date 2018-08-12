@@ -51,22 +51,23 @@ body {
 }
 
 .island {
-    background-image: url(./pics/.island.jpg) 
+    background-image: url(./pics/sunset.jpg)
     background-size: cover;
+    /* background-image: url(./pics/water.jpg); */
 }
 
 .water {
-    background-image: url(./pics/.water.jpg);
+    background-image: url(./pics/water.jpg);
     background-size: cover;
 }
 
 .sun {
-    background-image: url(./pics/.sun.jpg);
+    background-image: url(./pics/sun.jpg);
     background-size: cover;
 }
 
 .beach {
-    background-image: url(./pics/.beach.jpg);
+    background-image: url(./pics/beach.jpg);
     background-size: cover;
 }
 
