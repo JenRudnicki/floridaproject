@@ -1,8 +1,8 @@
-var sun = document.getElementById('topleft');
-var beach = document.getElementById('topright');
-var island = document.getElementById('bottomleft');
-var water = document.getElementById('bottomright');
-var logo = document.getElementById('logo')
+let sun = document.getElementById('topleft');
+let beach = document.getElementById('topright');
+let island = document.getElementById('bottomleft');
+let water = document.getElementById('bottomright');
+let logo = document.getElementById('logo')
 
 sun.addEventListener("click", function () {
     sun.classList.remove('sun');
@@ -203,7 +203,4 @@ function createCard(florida, location) {
 
     document.querySelector(location).appendChild(card);
 }
-
-//http://api.musixmatch.com/ws/1.1/track.search?apikey=***&q_track=Dire%20straits%20Sultans%20of%20Swing&page_size=10
-//<script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP">
 // root url http://api.musixmatch.com/ws/1.1/
