@@ -208,17 +208,19 @@ function createCard(florida, location) {
 
     document.querySelector(location).appendChild(card);
 }
+checkUserExists()
 form.addEventListener("submit", function (e) {
     e.preventDefault()
     let userEmail = document.getElementById("email").value;
     localStorage.setItem("email", userEmail);
+    form.style.display = 'none';
 })
 
-// function checkUserExists{
-//     if(localStorage.getItem("email")){    
-//     display:none }
-// }
-//make form disappear if stored in localStorage
+function checkUserExists(){
+    if (localStorage.getItem("email")) {
+        form.style.display = 'none';
+    }
+}
 
 
 // the root url to use http://api.musixmatch.com/ws/1.1/
