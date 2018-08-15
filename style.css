@@ -97,3 +97,14 @@ body {
 .card h1 {
     padding: 10px;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 40%;
+    margin-top: 1%;
+    border-radius: 25%;
+}
+
+/* append the create a class Selector display:none, look at DOM drill if have somti  */

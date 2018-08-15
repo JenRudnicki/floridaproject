@@ -2,7 +2,8 @@ let sun = document.getElementById('topleft');
 let beach = document.getElementById('topright');
 let island = document.getElementById('bottomleft');
 let water = document.getElementById('bottomright');
-let logo = document.getElementById('logo')
+let logo = document.getElementById('logo');
+let form = document.querySelector('form');
 
 sun.addEventListener("click", function () {
     sun.classList.remove('sun');
@@ -64,7 +65,7 @@ beach.addEventListener("click", function () {
 let baseURI = "https://galvanize-cors.herokuapp.com/http://api.musixmatch.com/ws/1.1/"
 
 
-let islandTracks = []; 
+let islandTracks = [];
 
 document.getElementById("bottomleft").addEventListener("click", islandClick);
 
@@ -135,6 +136,7 @@ function waterClick(event) {
 }
 let beachTracks = [];
 document.getElementById("topright").addEventListener("click", beachClick);
+
 function beachClick(event) {
     let bl = document.querySelector("#bottomleft .cardContainer");
     let tl = document.querySelector("#topleft .cardContainer");
@@ -162,6 +164,7 @@ function beachClick(event) {
 }
 let sunTracks = [];
 document.getElementById("topleft").addEventListener("click", sunClick);
+
 function sunClick(event) {
     let bl = document.querySelector("#bottomleft .cardContainer");
     let br = document.querySelector("#bottomright .cardContainer");
@@ -187,9 +190,11 @@ function sunClick(event) {
             processData(sunTracks, "#topleft .cardContainer")
         });
 }
+
 function processData(trackList, location) {
     trackList.forEach(element => createCard(element, location));
 }
+
 function createCard(florida, location) {
     let card = document.createElement("div");
     card.classList.add("card");
@@ -203,4 +208,17 @@ function createCard(florida, location) {
 
     document.querySelector(location).appendChild(card);
 }
-// root url http://api.musixmatch.com/ws/1.1/
+form.addEventListener("submit", function (e) {
+    e.preventDefault()
+    let userEmail = document.getElementById("email").value;
+    localStorage.setItem("email", userEmail);
+})
+
+// function checkUserExists{
+//     if(localStorage.getItem("email")){    
+//     display:none }
+// }
+//make form disappear if stored in localStorage
+
+
+// the root url to use http://api.musixmatch.com/ws/1.1/
